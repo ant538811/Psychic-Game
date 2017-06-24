@@ -12,18 +12,11 @@
     var youGuessed = [];
     var guessCounter = 0;
     var hiddenLetter = letter[Math.floor(Math.random() * letter.length)];
-
-    //When the user presses a key, it will run the code inside
     document.onkeyup = function(event) {
-
-        //Determine which key was pressed
+        if (event.key >= "a" && event.key <= "z")
+        {
         var guessLetter = event.key;
-        //document.write(guessLetter);
-        //Generates the computer's choice from the letter array
-        //var hiddenLetter = letter[Math.floor(Math.random() * letter.length)];
-
-        //If user pushes r, p, or s, start the game
-            //Compares the user guess to the computer guess, and tallies your wins, losses, or ties.
+        }
         if (guessLetter === hiddenLetter) 
             {
                 wins++;
